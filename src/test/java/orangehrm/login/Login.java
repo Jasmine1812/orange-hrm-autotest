@@ -31,13 +31,15 @@ public class Login extends BaseTest {
     //Data
     //Connect to DB
     //Report
-    //Assert and verify
+    //Assert and verify --> Done
+    //log
     @Test
     public void TC_01_Login_Success() {
         loginPage = PageGenerator.getLoginPage(driver);
         loginPage.enterToUserNameTextBox("Admin");
         loginPage.enterToPasswordTextBox("Admin@admin123");
         homepage = loginPage.clickToLoginButton();
+        verifyFalse(homepage.isTimeAtWorkTextboxDisplayed());
     }
     @AfterClass
     public void afterClass() {

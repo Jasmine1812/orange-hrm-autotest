@@ -17,6 +17,11 @@ public class DashboardPageObject extends BaseActions {
         clickToElement(DashboardPageUI.PIM_LINK);
     }
 
+    public boolean isTimeAtWorkTextboxDisplayed() {
+        waitForElementVisible(DashboardPageUI.TIME_AT_WORK_TEXTBOX);
+        return isElementDisplayed(DashboardPageUI.TIME_AT_WORK_TEXTBOX);
+    }
+
 //    public EmployeeListPageObject openEmployeeListPage() {
 //        clickToPIMLink();
 //        waitForSpinnerIconInvisible();
